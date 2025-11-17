@@ -6,17 +6,17 @@ import { ChevronRight, Camera, Waves, Users, Mountain, Palmtree, Fish, MapPin, C
 const Home = () => {
   const heroImages = [
     {
-      url: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1600&q=80',
+      url: '/images/hero1.jpg',
       alt: 'African Safari',
       caption: 'Discover the Wild Beauty of Africa'
     },
     {
-      url: 'https://images.unsplash.com/photo-1549366021-9f761d450615?w=1600&q=80',
+      url: '/images/hero2.jpg',
       alt: 'Lake Malawi',
       caption: 'Crystal Waters of Lake Malawi'
     },
     {
-      url: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=1600&q=80',
+      url: '/images/hero3.jpg',
       alt: 'Wildlife',
       caption: 'Unforgettable Wildlife Encounters'
     }
@@ -37,37 +37,37 @@ const Home = () => {
       title: '12 Days Northern Malawi Classic Tour',
       validity: '1/Jan-31/Dec/2025',
       price: '2,250 P/P',
-      image: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&q=80'
+      image: '/images/tour1.jpg' 
     },
     {
       title: '5 Days Lake Malawi & Liwonde National Park',
       validity: '1/Jan-31/Dec/2025',
       price: '870 P/P',
-      image: 'https://images.unsplash.com/photo-1549366021-9f761d450615?w=600&q=80'
+      image: '/images/tour2.jpg' 
     },
     {
       title: '16 Days Southern Malawi Classic Tour',
       validity: '1/Jan-31/Dec/2025',
       price: '2,350 P/P',
-      image: 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=600&q=80'
+      image: '/images/tour3.jpg' 
     },
     {
       title: '12 Days Malawi Cultural Tour',
       validity: '1/Jan-31/Dec/2025',
       price: '1,950 P/P',
-      image: 'https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=600&q=80'
+      image: '/images/tour4.jpg' 
     },
     {
       title: '14 Days Malawi Typical Safari Tour',
       validity: '1/Jan-31/Dec/2025',
       price: '2,160 P/P',
-      image: 'https://images.unsplash.com/photo-1534177616072-ef7dc120449d?w=600&q=80'
+      image: '/images/tour5.jpg' 
     },
     {
       title: '12 Days Malawi Bush & Beach Vacation',
       validity: '1/Jan-31/Dec/2025',
       price: '2,275 P/P',
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80'
+      image: '/images/tour6.jpg' 
     }
   ];
 
@@ -131,105 +131,105 @@ const Home = () => {
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&q=80" 
+                src="/images/safari.jpg" 
                 alt="Safari" 
                 className="w-full h-full object-cover"
               />
             </div>
           </div>
 
-          {/* Three Countries */}
-<div className="grid md:grid-cols-3 gap-8">
-  {/* Malawi Card */}
-  <div className="group relative rounded-2xl overflow-hidden shadow-2xl h-96 transform hover:scale-105 transition-all duration-300">
-    {/* Background Image */}
-    <div className="absolute inset-0">
-      <img 
-        src="/images/malawi.jpg" 
-        alt="Malawi" 
-        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-      />
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-amber-900 via-amber-900/70 to-transparent"></div>
-    </div>
-    
-    {/* Content */}
-    <div className="relative h-full flex flex-col justify-end p-8 text-white">
-      <MapPin className="w-12 h-12 mb-4 text-amber-300" />
-      <h3 className="text-3xl font-bold mb-3">MALAWI</h3>
-      <p className="text-lg font-semibold text-amber-200 mb-3">The Warm Heart of Africa</p>
-      <p className="text-neutral-100 leading-relaxed">
-        Discover the majestic Lake Malawi Beaches, National Parks, Game Reserves, rugged landscapes, and vibrant markets.
-      </p>
-      <Link 
-        to="/destinations" 
-        className="mt-4 inline-flex items-center text-amber-300 hover:text-amber-200 font-semibold"
-      >
-        Explore Malawi <ChevronRight className="w-4 h-4 ml-1" />
-      </Link>
-    </div>
-  </div>
-  
-  {/* Mozambique Card */}
-  <div className="group relative rounded-2xl overflow-hidden shadow-2xl h-96 transform hover:scale-105 transition-all duration-300">
-    {/* Background Image */}
-    <div className="absolute inset-0">
-      <img 
-        src="/images/mozambique.jpg" 
-        alt="Mozambique" 
-        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-      />
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-blue-900 via-blue-900/70 to-transparent"></div>
-    </div>
-    
-    {/* Content */}
-    <div className="relative h-full flex flex-col justify-end p-8 text-white">
-      <MapPin className="w-12 h-12 mb-4 text-blue-300" />
-      <h3 className="text-3xl font-bold mb-3">MOZAMBIQUE</h3>
-      <p className="text-lg font-semibold text-blue-200 mb-3">Paradise Beaches & History</p>
-      <p className="text-neutral-100 leading-relaxed">
-        Relax on pristine beaches, explore the historic Island of Mozambique, and experience the thrill of marine life.
-      </p>
-      <Link 
-        to="/destinations" 
-        className="mt-4 inline-flex items-center text-blue-300 hover:text-blue-200 font-semibold"
-      >
-        Explore Mozambique <ChevronRight className="w-4 h-4 ml-1" />
-      </Link>
-    </div>
-  </div>
-  
-        {/* Zambia Card */}
-        <div className="group relative rounded-2xl overflow-hidden shadow-2xl h-96 transform hover:scale-105 transition-all duration-300">
-          {/* Background Image */}
-          <div className="absolute inset-0">
-            <img 
-              src="/images/zambia.jpg" 
-              alt="Zambia" 
-              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-            />
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-green-900 via-green-900/70 to-transparent"></div>
+          {/* Three Countries - Clear Visibility */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Malawi Card */}
+            <div className="group relative rounded-2xl overflow-hidden shadow-2xl h-96 transform hover:scale-105 transition-all duration-300">
+              {/* Background Image */}
+              <div className="absolute inset-0">
+                <img 
+                  src="/images/malawi.jpg" 
+                  alt="Malawi" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                {/* Lighter gradient - only at bottom for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+              </div>
+              
+              {/* Content */}
+              <div className="relative h-full flex flex-col justify-end p-8 text-white">
+                <MapPin className="w-12 h-12 mb-4 text-white drop-shadow-lg" />
+                <h3 className="text-3xl font-bold mb-3 drop-shadow-lg">MALAWI</h3>
+                <p className="text-lg font-semibold text-amber-300 mb-3 drop-shadow-lg">The Warm Heart of Africa</p>
+                <p className="text-white leading-relaxed drop-shadow-lg mb-4">
+                  Discover the majestic Lake Malawi Beaches, National Parks, Game Reserves, rugged landscapes, and vibrant markets.
+                </p>
+                <Link 
+                  to="/destinations" 
+                  className="inline-flex items-center text-amber-400 hover:text-amber-300 font-semibold drop-shadow-lg"
+                >
+                  Explore Malawi <ChevronRight className="w-4 h-4 ml-1" />
+                </Link>
+              </div>
+            </div>
+            
+            {/* Mozambique Card */}
+            <div className="group relative rounded-2xl overflow-hidden shadow-2xl h-96 transform hover:scale-105 transition-all duration-300">
+              {/* Background Image */}
+              <div className="absolute inset-0">
+                <img 
+                  src="/images/mozambique.jpg" 
+                  alt="Mozambique" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                {/* Lighter gradient - only at bottom for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+              </div>
+              
+              {/* Content */}
+              <div className="relative h-full flex flex-col justify-end p-8 text-white">
+                <MapPin className="w-12 h-12 mb-4 text-white drop-shadow-lg" />
+                <h3 className="text-3xl font-bold mb-3 drop-shadow-lg">MOZAMBIQUE</h3>
+                <p className="text-lg font-semibold text-blue-300 mb-3 drop-shadow-lg">Paradise Beaches & History</p>
+                <p className="text-white leading-relaxed drop-shadow-lg mb-4">
+                  Relax on pristine beaches, explore the historic Island of Mozambique, and experience the thrill of marine life.
+                </p>
+                <Link 
+                  to="/destinations" 
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold drop-shadow-lg"
+                >
+                  Explore Mozambique <ChevronRight className="w-4 h-4 ml-1" />
+                </Link>
+              </div>
+            </div>
+            
+            {/* Zambia Card */}
+            <div className="group relative rounded-2xl overflow-hidden shadow-2xl h-96 transform hover:scale-105 transition-all duration-300">
+              {/* Background Image */}
+              <div className="absolute inset-0">
+                <img 
+                  src="/images/zambia.jpg" 
+                  alt="Zambia" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                {/* Lighter gradient - only at bottom for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+              </div>
+              
+              {/* Content */}
+              <div className="relative h-full flex flex-col justify-end p-8 text-white">
+                <MapPin className="w-12 h-12 mb-4 text-white drop-shadow-lg" />
+                <h3 className="text-3xl font-bold mb-3 drop-shadow-lg">ZAMBIA</h3>
+                <p className="text-lg font-semibold text-green-300 mb-3 drop-shadow-lg">Wilderness & Wonder</p>
+                <p className="text-white leading-relaxed drop-shadow-lg mb-4">
+                  Marvel at Victoria Falls' mighty power, discover Lower Zambezi, explore South Luangwa National Park's wildlife, and immerse yourself in local culture.
+                </p>
+                <Link 
+                  to="/destinations" 
+                  className="inline-flex items-center text-green-400 hover:text-green-300 font-semibold drop-shadow-lg"
+                >
+                  Explore Zambia <ChevronRight className="w-4 h-4 ml-1" />
+                </Link>
+              </div>
+            </div>
           </div>
-          
-          {/* Content */}
-          <div className="relative h-full flex flex-col justify-end p-8 text-white">
-            <MapPin className="w-12 h-12 mb-4 text-green-300" />
-            <h3 className="text-3xl font-bold mb-3">ZAMBIA</h3>
-            <p className="text-lg font-semibold text-green-200 mb-3">Wilderness & Wonder</p>
-            <p className="text-neutral-100 leading-relaxed">
-              Marvel at Victoria Falls' mighty power, discover Lower Zambezi, explore South Luangwa National Park's wildlife, and immerse yourself in local culture.
-            </p>
-            <Link 
-              to="/destinations" 
-              className="mt-4 inline-flex items-center text-green-300 hover:text-green-200 font-semibold"
-            >
-              Explore Zambia <ChevronRight className="w-4 h-4 ml-1" />
-            </Link>
-          </div>
-        </div>
-       </div>
         </div>
       </section>
 
@@ -247,7 +247,7 @@ const Home = () => {
 
           <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl mb-12">
             <img 
-              src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=1200&q=80" 
+              src="/images/expertise.jpg" 
               alt="Adventure" 
               className="w-full h-full object-cover"
             />
@@ -329,7 +329,7 @@ const Home = () => {
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=1600&q=80" 
+            src="images/booking-cta.jpg" 
             alt="Book Your Adventure" 
             className="w-full h-full object-cover"
           />
@@ -354,7 +354,6 @@ const Home = () => {
         </div>
       </section>
 
-
       {/* Testimonials Section */}
       <section className="py-20 bg-neutral-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -365,7 +364,6 @@ const Home = () => {
             </h2>
           </div>
 
-          
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, idx) => (
               <div key={idx} className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow">
@@ -390,61 +388,61 @@ const Home = () => {
       
 
       {/* Contact CTA Section */}
-<section className="relative py-40 overflow-hidden">
-  {/* Background Image */}
-  <div className="absolute inset-0">
-    <img 
-      src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1600&q=80" 
-      alt="Adventure Awaits" 
-      className="w-full h-full object-cover"
-    />
-    <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/60"></div>
-  </div>
+      <section className="relative py-40 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1600&q=80" 
+            alt="Adventure Awaits" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/60"></div>
+        </div>
 
-  {/* Content */}
-  <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <div className="mb-12">
-      <p className="text-amber-400 font-semibold text-lg mb-4 uppercase tracking-widest">
-        Ready to Explore?
-      </p>
-      <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-        Let's Plan Your<br />Perfect Adventure
-      </h2>
-      <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-        Our team of safari experts is ready to craft a personalized journey that exceeds your wildest dreams. From breathtaking landscapes to unforgettable wildlife encounters.
-      </p>
-    </div>
+        {/* Content */}
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="mb-12">
+            <p className="text-amber-400 font-semibold text-lg mb-4 uppercase tracking-widest">
+              Ready to Explore?
+            </p>
+            <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Let's Plan Your<br />Perfect Adventure
+            </h2>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Our team of safari experts is ready to craft a personalized journey that exceeds your wildest dreams. From breathtaking landscapes to unforgettable wildlife encounters.
+            </p>
+          </div>
 
-    {/* Three Countries with Icons */}
-    <div className="mb-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
-      <div className="flex items-center backdrop-blur-md bg-white bg-opacity-10 rounded-full px-6 py-3 border border-white border-opacity-20">
-        <MapPin className="w-5 h-5 text-amber-400 mr-2" />
-        <span className="text-white font-semibold">Malawi</span>
-      </div>
-      <div className="hidden sm:block text-white text-2xl">•</div>
-      <div className="flex items-center backdrop-blur-md bg-white bg-opacity-10 rounded-full px-6 py-3 border border-white border-opacity-20">
-        <MapPin className="w-5 h-5 text-blue-400 mr-2" />
-        <span className="text-white font-semibold">Mozambique</span>
-      </div>
-      <div className="hidden sm:block text-white text-2xl">•</div>
-      <div className="flex items-center backdrop-blur-md bg-white bg-opacity-10 rounded-full px-6 py-3 border border-white border-opacity-20">
-        <MapPin className="w-5 h-5 text-green-400 mr-2" />
-        <span className="text-white font-semibold">Zambia</span>
-      </div>
-    </div>
+          {/* Three Countries with Icons */}
+          <div className="mb-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex items-center backdrop-blur-md bg-white bg-opacity-10 rounded-full px-6 py-3 border border-white border-opacity-20">
+              <MapPin className="w-5 h-5 text-amber-400 mr-2" />
+              <span className="text-white font-semibold">Malawi</span>
+            </div>
+            <div className="hidden sm:block text-white text-2xl">•</div>
+            <div className="flex items-center backdrop-blur-md bg-white bg-opacity-10 rounded-full px-6 py-3 border border-white border-opacity-20">
+              <MapPin className="w-5 h-5 text-blue-400 mr-2" />
+              <span className="text-white font-semibold">Mozambique</span>
+            </div>
+            <div className="hidden sm:block text-white text-2xl">•</div>
+            <div className="flex items-center backdrop-blur-md bg-white bg-opacity-10 rounded-full px-6 py-3 border border-white border-opacity-20">
+              <MapPin className="w-5 h-5 text-green-400 mr-2" />
+              <span className="text-white font-semibold">Zambia</span>
+            </div>
+          </div>
 
-    {/* CTA Button */}
-    <div className="flex justify-center">
-      <Link 
-        to="/contact"
-        className="bg-amber-500 text-white px-12 py-5 rounded-full font-bold text-xl hover:bg-amber-400 transition-all transform hover:scale-105 shadow-2xl inline-flex items-center"
-      >
-        <Mail className="w-6 h-6 mr-3" />
-        Contact Us Now
-      </Link>
-    </div>
-  </div>
-</section>
+          {/* CTA Button */}
+          <div className="flex justify-center">
+            <Link 
+              to="/contact"
+              className="bg-amber-500 text-white px-12 py-5 rounded-full font-bold text-xl hover:bg-amber-400 transition-all transform hover:scale-105 shadow-2xl inline-flex items-center"
+            >
+              <Mail className="w-6 h-6 mr-3" />
+              Contact Us Now
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

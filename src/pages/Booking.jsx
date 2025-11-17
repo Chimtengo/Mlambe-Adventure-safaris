@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import { Calendar, Users, Mail, Phone, MessageSquare, User } from 'lucide-react';
 
 const Booking = () => {
@@ -13,6 +14,8 @@ const Booking = () => {
     notes: ''
   });
 
+  const [loading, setLoading] = useState(false);
+
   const handleInputChange = (e) => {
     setBookingForm({
       ...bookingForm,
@@ -22,8 +25,44 @@ const Booking = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Booking form submitted:', bookingForm);
-    alert('Thank you for your booking request! We will contact you soon.');
+    setLoading(true);
+
+    emailjs
+      .send(
+        'service_x0xli2h',
+        'template_wsvwgig',    
+        {
+          from_name: bookingForm.fullName,
+          from_email: bookingForm.email,
+          phone: bookingForm.phone,
+          numberOfPeople: bookingForm.numberOfPeople,
+          dateFrom: bookingForm.dateFrom,
+          dateTo: bookingForm.dateTo,
+          interestedIn: bookingForm.interestedIn,
+          notes: bookingForm.notes,
+        },
+        'twjyyJIa_TSVz5JMY'      
+      )
+      .then(() => {
+        alert('✅ Your booking request has been sent successfully! We will contact you soon.' + '\n' + 'Thank you for choosing Mlambe Adventure Safaris.');
+        setBookingForm({
+          fullName: '',
+          numberOfPeople: '',
+          dateFrom: '',
+          dateTo: '',
+          interestedIn: 'Camping Tours',
+          email: '',
+          phone: '',
+          notes: ''
+        });
+      })
+      .catch((error) => {
+        console.error('❌ EmailJS Error:', error);
+        alert('Something went wrong while sending your request. Please try again.');
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (
@@ -32,9 +71,12 @@ const Booking = () => {
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=1600&q=80" 
+            src="/images/booking-hero.jpg" 
             alt="Book Your Safari" 
             className="w-full h-full object-cover"
+            onError={(e) => {
+              e.target.src = 'https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=1600&q=80';
+            }}
           />
           <div className="absolute inset-0 bg-black bg-opacity-60"></div>
         </div>
@@ -45,15 +87,15 @@ const Booking = () => {
         </div>
       </section>
 
-      {/* Booking Form Section */}
-      <section className="py-20 relative">
-        {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-blue-50"></div>
+      {/* Booking Form Section with Fixed Background */}
+      <section className="py-20 relative" style={{ backgroundImage: 'url(/images/booking-background.jpg)', backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        {/* Amber Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-900/90 via-amber-800/85 to-orange-900/90"></div>
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <form 
             onSubmit={handleSubmit} 
-            className="backdrop-blur-md bg-white bg-opacity-80 rounded-2xl p-8 md:p-12 shadow-2xl border border-white border-opacity-50"
+            className="backdrop-blur-md bg-white bg-opacity-95 rounded-2xl p-8 md:p-12 shadow-2xl border border-white border-opacity-50"
           >
             <div className="grid md:grid-cols-2 gap-6">
               <div>
@@ -191,9 +233,10 @@ const Booking = () => {
 
             <button 
               type="submit"
-              className="w-full bg-amber-500 text-white py-4 rounded-lg font-bold text-lg hover:bg-amber-600 transition-colors mt-6 shadow-lg"
+              disabled={loading}
+              className="w-full bg-amber-500 text-white py-4 rounded-lg font-bold text-lg hover:bg-amber-600 transition-colors mt-6 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Submit Booking Request
+              {loading ? 'Sending...' : 'Submit Booking Request'}
             </button>
           </form>
         </div>
