@@ -96,7 +96,7 @@ const Conservation = () => {
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <Leaf className="w-16 h-16 sm:w-20 sm:h-20 text-amber-400 mx-auto mb-6 animate-bounce" />
+          <Leaf className="w-16 h-16 sm:w-20 sm:h-20 text-green-400 mx-auto mb-6 animate-bounce" />
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in-up">
             MAS Wildlife Conservation Foundation
           </h1>
@@ -149,7 +149,7 @@ const Conservation = () => {
                 className="bg-white rounded-2xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-2 duration-300 animate-slide-in-up"
                 style={{ animationDelay: `${idx * 0.1}s` }}
               >
-                <div className="bg-gradient-to-br from-amber-500 to-orange-600 w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-6 animate-scale-in">
+                <div className="bg-gradient-to-br from-green-200 to-green-600 w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-6 animate-scale-in">
                   <area.icon className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-neutral-900 mb-3">{area.title}</h3>
@@ -206,7 +206,7 @@ const Conservation = () => {
                 style={{ animationDelay: `${idx * 0.15}s` }}
               >
                 <div className="flex items-start">
-                  <div className="bg-amber-500 rounded-full p-3 mr-4 flex-shrink-0">
+                  <div className="bg-green-500 rounded-full p-3 mr-4 flex-shrink-0">
                     <project.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -367,7 +367,7 @@ const Conservation = () => {
       </section>
 
       {/* Call to Action with Pulse Animation */}
-      <section className="py-16 sm:py-20 bg-gradient-to-r from-amber-500 to-orange-600">
+      <section className="py-16 sm:py-20 bg-gradient-to-r from-amber-500/70 to-yellow-500/70">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in">
             Join Us in Making a Difference

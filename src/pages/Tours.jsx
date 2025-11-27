@@ -213,13 +213,13 @@ const ToursSafaris = () => {
       icon: Palmtree,
       title: 'BEACH RELAXATION',
       description: 'Unwind on pristine beaches, snorkel, or dive in crystal-clear waters.',
-      gradient: 'from-blue-500 to-cyan-600'
+      gradient: 'from-blue-300 to-cyan-500'
     },
     {
       icon: Zap,
       title: 'ADVENTURE ACTIVITIES',
       description: 'Hike, bike, kayak, or take to the skies for breathtaking views.',
-      gradient: 'from-orange-500 to-red-600'
+      gradient: 'from-yellow-500 to-red-300'
     },
     {
       icon: Map,

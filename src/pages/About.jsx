@@ -43,6 +43,11 @@ const About = () => {
       image: '/images/team-luke.jpg'
     },
     {
+      name: 'Annie Stambuli',
+      role: 'Administrative Officer',
+      image: '/images/team-annie.jpg'
+    },
+    {
       name: 'Knocks Kaipa',
       role: 'Driver/Guide',
       image: '/images/team-knocks.jpg'
@@ -361,41 +366,88 @@ const About = () => {
       </section>
 
       {/* Meet Our Team Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-neutral-900 to-neutral-800 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10 sm:mb-12 md:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
-              Meet Our Team
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto px-4">
-              The passionate experts behind your unforgettable African adventures
-            </p>
-          </div>
+<section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-neutral-900 to-neutral-800 text-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-10 sm:mb-12 md:mb-16">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
+        Meet Our Team
+      </h2>
+      <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+        The passionate experts behind your unforgettable African adventures
+      </p>
+    </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
-            {team.map((member, idx) => (
-              <div key={idx} className="group">
-                <div className="relative overflow-hidden rounded-xl sm:rounded-2xl mb-3 sm:mb-4 md:mb-6 aspect-square">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                    onError={(e) => {
-                      e.target.src = 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80';
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                </div>
-                
-                <div className="text-center">
-                  <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold mb-1 sm:mb-2">{member.name}</h3>
-                  <p className="text-xs sm:text-sm md:text-base text-amber-400 font-semibold">{member.role}</p>
-                </div>
-              </div>
-            ))}
+    {/* Featured Founder - Centered */}
+    <div className="max-w-xs mx-auto mb-12 sm:mb-16 md:mb-20">
+      <div className="relative group">
+        {/* Founder Badge */}
+        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+          <div className="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-6 py-2 rounded-full font-bold text-sm shadow-lg">
+            Founder
           </div>
         </div>
-      </section>
+
+        {/* Founder Card */}
+        <div className="bg-gradient-to-br from-amber-500/10 to-orange-600/10 rounded-2xl p-4 backdrop-blur-sm border-2 border-amber-500/30 hover:border-amber-500/50 transition-all">
+          <div className="relative overflow-hidden rounded-xl mb-4 aspect-square shadow-2xl">
+            <img 
+              src={team[0].image} 
+              alt={team[0].name}
+              className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+          </div>
+          
+          <div className="text-center">
+            <h3 className="text-xl sm:text-2xl font-bold mb-2">
+              {team[0].name}
+            </h3>
+            <p className="text-base sm:text-lg text-amber-400 font-semibold">
+              {team[0].role}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Rest of the Team - 4 in One Line */}
+    <div>
+      
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto">
+        {team.slice(1).map((member, idx) => (
+          <div key={idx} className="group">
+            {/* Team Member Card */}
+            <div className="bg-white/5 rounded-2xl p-3 sm:p-4 backdrop-blur-sm border border-white/10 hover:border-amber-500/50 hover:bg-white/10 transition-all">
+              <div className="relative overflow-hidden rounded-xl mb-3 sm:mb-4 aspect-square shadow-xl">
+                <img 
+                  src={member.image} 
+                  alt={member.name}
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-amber-500/0 group-hover:bg-amber-500/10 transition-colors duration-300"></div>
+              </div>
+              
+              <div className="text-center">
+                <h3 className="text-sm sm:text-base md:text-lg font-bold mb-1">
+                  {member.name}
+                </h3>
+                <p className="text-xs sm:text-sm text-amber-400 font-semibold">
+                  {member.role}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Call to Action */}
       <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-amber-500 to-orange-600">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ImageSlider from '../components/ImageSlider';
+import  ImageWithSkeleton  from '../components/ImageWithSkeleton';
 import { ChevronRight, Camera, Waves, Users, Mountain, Palmtree, Fish, MapPin, Calendar, DollarSign, Mail, Phone } from 'lucide-react';
 
 const Home = () => {
@@ -144,10 +145,12 @@ const Home = () => {
             <div className="group relative rounded-2xl overflow-hidden shadow-2xl h-96 transform hover:scale-105 transition-all duration-300">
               {/* Background Image */}
               <div className="absolute inset-0">
-                <img 
+                <ImageWithSkeleton
                   src="/images/malawi.jpg" 
                   alt="Malawi" 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  skeletonType='shimmer'
+                  showIcon={true}
                 />
                 {/* Lighter gradient - only at bottom for text readability */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
@@ -174,10 +177,12 @@ const Home = () => {
             <div className="group relative rounded-2xl overflow-hidden shadow-2xl h-96 transform hover:scale-105 transition-all duration-300">
               {/* Background Image */}
               <div className="absolute inset-0">
-                <img 
+                <ImageWithSkeleton
                   src="/images/mozambique.jpg" 
                   alt="Mozambique" 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  skeletonType = 'shimmer'
+                  showIcon = {true}
                 />
                 {/* Lighter gradient - only at bottom for text readability */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
@@ -204,10 +209,12 @@ const Home = () => {
             <div className="group relative rounded-2xl overflow-hidden shadow-2xl h-96 transform hover:scale-105 transition-all duration-300">
               {/* Background Image */}
               <div className="absolute inset-0">
-                <img 
+                <ImageWithSkeleton 
                   src="/images/zambia.jpg" 
                   alt="Zambia" 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  skeletonType="shimmer"
+                  showIcon={true}
                 />
                 {/* Lighter gradient - only at bottom for text readability */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
@@ -328,7 +335,7 @@ const Home = () => {
       {/* Call to Action - Booking Section */}
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0">
-          <img 
+          <img
             src="images/booking-cta.jpg" 
             alt="Book Your Adventure" 
             className="w-full h-full object-cover"

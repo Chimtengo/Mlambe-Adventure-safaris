@@ -1,6 +1,7 @@
 import React from 'react';
 import { MapPin, Compass, Mountain, Waves, Camera, Ship, Tent, Users, CheckCircle, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import ImageWithSkeleton from '../components/ImageWithSkeleton';
 
 const Destinations = () => {
   return (
@@ -8,13 +9,13 @@ const Destinations = () => {
       {/* Hero Section */}
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0">
-          <img 
+          <ImageWithSkeleton
             src="/images/destinations-hero.jpg" 
             alt="Southern Africa Destinations" 
             className="w-full h-full object-cover"
-            onError={(e) => {
-              e.target.src = 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1600&q=80';
-            }}
+            fallbackSrc="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1600&q=80"
+            skeletonType="wave"
+            showIcon={true}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
         </div>
@@ -64,13 +65,13 @@ const Destinations = () => {
           <div className="mb-16">
             <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
               <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
-                <img 
+                <ImageWithSkeleton
                   src="/images/malawi-natural-wonders.jpg" 
                   alt="Malawi Natural Wonders" 
                   className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.target.src = 'https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&q=80';
-                  }}
+                  fallbackSrc="https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&q=80"
+                  skeletonType="wave"
+                  showIcon={true}
                 />
               </div>
 
@@ -144,13 +145,13 @@ const Destinations = () => {
               </div>
 
               <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl order-1 md:order-2">
-                <img 
+                <ImageWithSkeleton
                   src="/images/malawi-wildlife.jpg" 
                   alt="Malawi Wildlife" 
                   className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.target.src = 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=800&q=80';
-                  }}
+                  fallbackSrc="https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=800&q=80"
+                  skeletonType="wave"
+                  showIcon={true}
                 />
               </div>
             </div>
@@ -160,13 +161,13 @@ const Destinations = () => {
           <div className="mb-16">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
-                <img 
+                <ImageWithSkeleton
                   src="/images/malawi-safaris.jpg" 
                   alt="Malawi Safaris" 
                   className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.target.src = 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&q=80';
-                  }}
+                  fallbackSrc="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&q=80"
+                  skeletonType="shimmer"
+                  showIcon={true}
                 />
               </div>
 
@@ -222,14 +223,14 @@ const Destinations = () => {
               </div>
 
               <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl order-1 md:order-2">
-                <img 
-                  src="/images/malawi-cultural.jpg" 
-                  alt="Malawi Cultural Experiences" 
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.target.src = 'https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=800&q=80';
-                  }}
-                />
+                <ImageWithSkeleton
+                    src="/images/malawi-cultural.jpg" 
+                    alt="Malawi Cultural Experiences" 
+                    className="w-full h-full object-cover"
+                    fallbackSrc="https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=800&q=80"
+                    skeletonType="wave"
+                    showIcon={true}
+                  />
               </div>
             </div>
           </div>
@@ -290,14 +291,14 @@ const Destinations = () => {
           {/* Popular Tour Packages */}
           <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl">
             <div className="relative h-64 rounded-xl overflow-hidden shadow-lg mb-8">
-              <img 
+              <ImageWithSkeleton
                 src="/images/malawi-tours.jpg" 
                 alt="Malawi Tour Packages" 
                 className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.target.src = 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&q=80';
-                }}
-              />
+                fallbackSrc="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&q=80"
+                skeletonType="wave"
+                showIcon={true}
+              />  
             </div>
 
             <h3 className="text-3xl font-bold text-neutral-900 mb-8 text-center">
@@ -351,13 +352,13 @@ const Destinations = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Mozambique Header */}
           <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl mb-12">
-            <img 
-              src="/images/mozambique-hero.jpg" 
-              alt="Mozambique" 
-              className="w-full h-full object-cover"
-              onError={(e) => {
-                e.target.src = 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&q=80';
-              }}
+            <ImageWithSkeleton
+                src="/images/mozambique-hero.jpg" 
+                alt="Mozambique" 
+                className="w-full h-full object-cover"
+                fallbackSrc="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&q=80"
+                skeletonType="wave"
+                showIcon={true}
             />
 
             
@@ -408,14 +409,13 @@ const Destinations = () => {
               </div>
 
               <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src="/images/mozambique-beaches.jpg" 
-                  alt="Mozambique Beaches" 
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.target.src = 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80';
-                  }}
-                />
+                <ImageWithSkeleton
+                    src="/images/mozambique-beaches.jpg" 
+                    alt="Mozambique Beaches" 
+                    className="w-full h-full object-cover"
+                    fallbackSrc="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80"
+                    skeletonType="wave"
+                  />
               </div>
             </div>
           </div>
@@ -460,13 +460,12 @@ const Destinations = () => {
           <div className="mb-16">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src="/images/mozambique-wildlife.jpg" 
-                  alt="Mozambique Wildlife" 
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.target.src = 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=800&q=80';
-                  }}
+                <ImageWithSkeleton
+                src="/images/mozambique-wildlife.jpg" 
+                alt="Mozambique Wildlife" 
+                className="w-full h-full object-cover"
+                fallbackSrc="https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=800&q=80"
+                skeletonType="wave"
                 />
               </div>
 
@@ -532,13 +531,12 @@ const Destinations = () => {
               </div>
 
               <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl order-1 md:order-2">
-                <img 
+                <ImageWithSkeleton
                   src="/images/mozambique-culture.jpg" 
                   alt="Mozambique Culture" 
                   className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.target.src = 'https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=800&q=80';
-                  }}
+                  fallbackSrc="https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=800&q=80"
+                  skeletonType="wave"
                 />
               </div>
             </div>
@@ -598,13 +596,12 @@ const Destinations = () => {
           {/* Mozambique Conclusion */}
           <div className="text-center">
             <div className="relative h-64 rounded-xl overflow-hidden shadow-lg mb-8">
-              <img 
+              <ImageWithSkeleton
                 src="/images/mozambique-conclusion.jpg" 
                 alt="Mozambique Experience" 
                 className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.target.src = 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80';
-                }}
+                fallbackSrc="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80"
+                skeletonType="shimmer"
               />
             </div>
             <p className="text-xl text-neutral-700 leading-relaxed italic">
@@ -633,11 +630,11 @@ const Destinations = () => {
           {/* Victoria Falls */}
           <div className="mb-16">
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl mb-8">
-              <img 
+              <ImageWithSkeleton
                 src="/images/zambia-victoria-falls.jpg" 
                 alt="Victoria Falls" 
                 className="w-full h-full object-cover"
-                
+                skeletonType="shimmer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
                 <div className="p-8 md:p-12 text-white">
@@ -695,14 +692,13 @@ const Destinations = () => {
           <div className="mb-16">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src="/images/zambia-kafue.jpg" 
-                  alt="Kafue National Park" 
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.target.src = 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&q=80';
-                  }}
-                />
+                <ImageWithSkeleton
+                    src="/images/zambia-kafue.jpg" 
+                    alt="Kafue National Park" 
+                    className="w-full h-full object-cover"
+                    fallbackSrc="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&q=80"
+                    skeletonType="wave"
+                  />
               </div>
 
               <div>
@@ -810,14 +806,12 @@ const Destinations = () => {
               </div>
 
               <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl order-1 md:order-2">
-                <img 
-                  src="/images/zambia-lower-zambezi.jpg" 
-                  alt="Lower Zambezi National Park" 
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.target.src = 'https://images.unsplash.com/photo-1534177616072-ef7dc120449d?w=800&q=80';
-                  }}
-                />
+                <ImageWithSkeleton
+                    src="/images/zambia-lower-zambezi.jpg" 
+                    alt="Lower Zambezi National Park" 
+                    className="w-full h-full object-cover"
+                    skeletonType="shimmer"
+                  />
               </div>
             </div>
           </div>
@@ -826,13 +820,11 @@ const Destinations = () => {
           <div className="mb-16">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
-                <img 
+                <ImageWithSkeleton
                   src="/images/zambia-south-luangwa.jpg" 
                   alt="South Luangwa National Park" 
                   className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.target.src = 'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=800&q=80';
-                  }}
+                  skeletonType="wave"
                 />
               </div>
 
@@ -890,13 +882,11 @@ const Destinations = () => {
           {/* Zambia Summary */}
           <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl mb-16">
             <div className="relative h-64 rounded-xl overflow-hidden shadow-lg mb-8">
-              <img 
+              <ImageWithSkeleton
                 src="/images/zambia-experience.jpg" 
                 alt="Zambia Experience" 
                 className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.target.src = 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&q=80';
-                }}
+                skeletonType="shimmer"
               />
             </div>
 
