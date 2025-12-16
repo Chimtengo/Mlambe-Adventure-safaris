@@ -20,7 +20,7 @@ const Navbar = () => {
     { name: 'Tours & Safaris', path: '/tours' },
     { name: 'Short/Day Trips', path: '/day-trips' },
     { name: 'Car Hire', path: '/car-hire' },
-    { name: 'Conservation', path: '/conservation' },
+    { name: 'Conservation Projects', path: '/conservation' },
   ];
 
   return (

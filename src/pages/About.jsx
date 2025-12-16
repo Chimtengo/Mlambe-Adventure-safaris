@@ -43,7 +43,7 @@ const About = () => {
       image: '/images/team-luke.jpg'
     },
     {
-      name: 'Annie Stambuli',
+      name: 'Annie Nyirenda',
       role: 'Administrative Officer',
       image: '/images/team-annie.jpg'
     },
@@ -114,12 +114,12 @@ const About = () => {
         </div>
         
         {/* Stats Card */}
-        <div className="absolute -bottom-0 -right-4 sm:-right-6 md:-right-8 bg-gradient-to-br from-amber-500 to-orange-600 text-white rounded-2xl p-5 sm:p-7 md:p-10 shadow-2xl transform hover:scale-105 transition-transform duration-300 stats-card-pulse">
-          <div className="text-center">
-            <div className="text-4xl sm:text-5xl md:text-6xl font-bold mb-2 sm:mb-3">18+</div>
-            <div className="text-base sm:text-lg md:text-xl font-semibold">Years Experience</div>
-          </div>
+        <div className="absolute -bottom-0 -right-4 sm:-right-6 md:-right-8 bg-gradient-to-br from-red-400 via-orange-400 to-amber-400 text-white rounded-2xl p-5 sm:p-7 md:p-10 shadow-2xl transform hover:scale-105 transition-transform duration-300 stats-card-pulse">
+        <div className="text-center">
+          <div className="text-4xl sm:text-5xl md:text-6xl font-bold mb-2 sm:mb-3 drop-shadow-lg">18+</div>
+          <div className="text-base sm:text-lg md:text-xl font-semibold drop-shadow-md">Years Experience</div>
         </div>
+      </div>
       </div>
     </div>
   </div>
@@ -192,16 +192,16 @@ const About = () => {
 
 
       {/* Mission Statement Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-amber-500 to-orange-600">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 sm:mb-8">
-            Our Mission
-          </h2>
-          <p className="text-lg sm:text-xl md:text-2xl text-white leading-relaxed max-w-4xl mx-auto">
-            To preserve and protect Malawi's wildlife, culture and natural heritage through sustainable tourism practices, community engagement, and conservation efforts.
-          </p>
-        </div>
-      </section>
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-red-400 via-orange-400 to-amber-400">
+  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 sm:mb-8 drop-shadow-lg">
+      Our Mission
+    </h2>
+    <p className="text-lg sm:text-xl md:text-2xl text-white leading-relaxed max-w-4xl mx-auto drop-shadow-md">
+      To preserve and protect Malawi's wildlife, culture and natural heritage through sustainable tourism practices, community engagement, and conservation efforts.
+    </p>
+  </div>
+</section>
 
       {/* Objectives Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-white">
@@ -450,31 +450,31 @@ const About = () => {
 
 
       {/* Call to Action */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-amber-500 to-orange-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Award className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-white mx-auto mb-4 sm:mb-6" />
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 px-4">
-            Ready to Experience Africa with Us?
-          </h2>
-          <p className="text-base sm:text-lg md:text-xl text-white mb-6 sm:mb-8 px-4">
-            Let our experienced team create your perfect African adventure
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
-            <Link 
-              to="/contact"
-              className="bg-white text-orange-600 px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-neutral-100 transition-colors inline-block"
-            >
-              Contact Us
-            </Link>
-            <Link 
-              to="/tours"
-              className="bg-transparent border-2 border-white text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-white hover:text-orange-600 transition-colors inline-block"
-            >
-              View Our Tours
-            </Link>
-          </div>
-        </div>
-      </section>
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-red-400 via-orange-400 to-amber-400">
+  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <Award className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-white mx-auto mb-4 sm:mb-6 drop-shadow-lg" />
+    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 px-4 drop-shadow-lg">
+      Ready to Experience Africa with Us?
+    </h2>
+    <p className="text-base sm:text-lg md:text-xl text-white mb-6 sm:mb-8 px-4 drop-shadow-md">
+      Let our experienced team create your perfect African adventure
+    </p>
+    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
+      <Link 
+        to="/contact"
+        className="bg-white text-orange-600 px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-neutral-100 transition-colors inline-block shadow-lg"
+      >
+        Contact Us
+      </Link>
+      <Link 
+        to="/tours"
+        className="bg-transparent border-2 border-white text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-white hover:text-orange-600 transition-colors inline-block"
+      >
+        View Our Tours
+      </Link>
+    </div>
+  </div>
+</section>
     </div>
   );
 };

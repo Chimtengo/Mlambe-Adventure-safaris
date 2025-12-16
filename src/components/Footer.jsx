@@ -151,7 +151,7 @@ const Footer = () => {
         <div className="border-t border-neutral-800 pt-8 mt-8">
   <div className="flex flex-col sm:flex-row justify-between items-center text-neutral-400 text-sm">
     <p className="mb-4 sm:mb-0">
-      © 2025 Mlambe Adventure Safaris. All rights reserved. | Developed by{' '}
+      © 2026 Mlambe Adventure Safaris. All rights reserved. | Developed by{' '}
       <a 
         href="https://shakesolutions.net" 
         target="_blank" 

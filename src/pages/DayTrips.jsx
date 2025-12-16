@@ -25,7 +25,7 @@ const ShortDayTrips = () => {
       includes: 'all road transport, services of Driver/guide, bottled water, entrance fee to wildlife sanctuary.',
       excludes: 'lunch, personal spending money, drinks and any other excursion not mentioned.',
       image: '/images/lilongwe-tour.jpg',
-      color: 'blue'
+      color: 'amber'
     },
     {
       number: '2',
@@ -35,7 +35,7 @@ const ShortDayTrips = () => {
       includes: 'all road transport, services of guide, bottled water',
       excludes: 'lunch, personal spending money, drinks and any other excursions not mentioned above.',
       image: '/images/dedza-pottery.jpg',
-      color: 'orange'
+      color: 'amber'
     },
     {
       number: '3',
@@ -46,7 +46,7 @@ const ShortDayTrips = () => {
       includes: 'all road transport, services of Driver/guide, bottled water, and entrance fee into Mua Mission.',
       excludes: 'lunch, personal spending money, drinks and any other excursion not mentioned.',
       image: '/images/central-region.jpg',
-      color: 'purple'
+      color: 'amber'
     },
     {
       number: '4',
@@ -56,7 +56,7 @@ const ShortDayTrips = () => {
       includes: 'all road transport, services of guide, bottled water, and entrance fee to a lodge to use their facilities.',
       excludes: 'lunch, personal spending money, drinks, and any other excursion not mentioned.',
       image: '/images/kuti-reserve.jpg',
-      color: 'green'
+      color: 'amber'
     },
     {
       number: '5',
@@ -67,7 +67,7 @@ const ShortDayTrips = () => {
       includes: 'All road Transfers to and fro Lilongwe, services of English speaking guide, entrance fee to use hotel / lodge facilities.',
       excludes: 'Food or drinks, optional excursions, use of watersport equipment.',
       image: '/images/lake-malawi-day.jpg',
-      color: 'cyan'
+      color: 'amber'
     },
     {
       number: '6',

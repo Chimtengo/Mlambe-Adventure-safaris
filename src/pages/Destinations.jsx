@@ -15,7 +15,7 @@ const Destinations = () => {
             className="w-full h-full object-cover"
             fallbackSrc="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1600&q=80"
             skeletonType="wave"
-            showIcon={true}
+            
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
         </div>
@@ -262,7 +262,7 @@ const Destinations = () => {
 
           {/* Accommodations */}
           <div className="mb-16">
-            <div className="bg-gradient-to-r from-amber-500 to-orange-600 rounded-2xl p-8 md:p-12 text-white">
+            <div className="bg-gradient-to-r from-yellow-500 to-black rounded-2xl p-8 md:p-12 text-white">
               <h3 className="text-3xl font-bold mb-6 text-center flex items-center justify-center">
                 <Tent className="w-8 h-8 mr-3" />
                 ACCOMMODATIONS:
@@ -295,7 +295,6 @@ const Destinations = () => {
                 src="/images/malawi-tours.jpg" 
                 alt="Malawi Tour Packages" 
                 className="w-full h-full object-cover"
-                fallbackSrc="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&q=80"
                 skeletonType="wave"
                 showIcon={true}
               />  
@@ -574,7 +573,7 @@ const Destinations = () => {
 
           {/* Accommodations */}
           <div className="mb-16">
-            <div className="bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl p-8 md:p-12 text-white">
+            <div className="bg-gradient-to-r from-yellow-500 to-black rounded-2xl p-8 md:p-12 text-white">
               <h3 className="text-3xl font-bold mb-6 text-center flex items-center justify-center">
                 <Tent className="w-8 h-8 mr-3" />
                 ACCOMMODATIONS:

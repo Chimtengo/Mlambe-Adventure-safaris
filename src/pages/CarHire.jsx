@@ -102,8 +102,8 @@ const CarHire = () => {
 
     emailjs
       .send(
-        'service_x0xli2h',     
-        'template_06b0o3j',    
+        'service_yfgzcop',     
+        'template_w4ylqcc',    
         {
           from_name: bookingForm.name,
           from_email: bookingForm.email,
@@ -114,7 +114,7 @@ const CarHire = () => {
           returnDate: bookingForm.returnDate,
           notes: bookingForm.notes,
         },
-        'twjyyJIa_TSVz5JMY'      
+        't5yqryKg6AeDRfy7P'      
       )
       .then(() => {
         alert('✅ Your car hire request has been sent successfully! We will contact you soon.' + '\n' + 'Thank you for choosing Mlambe Adventure Safaris.');
@@ -161,9 +161,7 @@ const CarHire = () => {
             src="/images/car-hire-hero.jpg" 
             alt="Car Hire" 
             className="w-full h-full object-cover"
-            onError={(e) => {
-              e.target.src = 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1600&q=80';
-            }}
+            
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/60"></div>
         </div>
@@ -201,9 +199,7 @@ const CarHire = () => {
                     src={vehicle.image} 
                     alt={vehicle.category} 
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    onError={(e) => {
-                      e.target.src = 'https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&q=80';
-                    }}
+                    
                   />
                   <div className="absolute top-4 left-4">
                     <span className="bg-amber-500 text-white px-4 py-2 rounded-full font-bold text-sm">

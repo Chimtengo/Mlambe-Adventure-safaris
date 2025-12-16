@@ -26,8 +26,8 @@ const Contact = () => {
 
     emailjs
       .send(
-        'service_x0xli2h',     
-        'template_06b0o3j',    
+        'service_y2azkvl',     
+        'template_2k906dj',    
         {
           from_name: contactForm.name,
           from_email: contactForm.email,
@@ -35,7 +35,7 @@ const Contact = () => {
           subject: contactForm.subject,
           message: contactForm.message,
         },
-        'twjyyJIa_TSVz5JMY'      
+        'nOZZy6dhO7MjM5mhc'      
       )
       .then(() => {
         alert('✅ Your message has been sent successfully! We will get back to you within 24 hours.' + '\n' + 'Thank you for contacting Mlambe Adventure Safaris.');

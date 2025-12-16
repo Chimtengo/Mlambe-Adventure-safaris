@@ -201,30 +201,35 @@ const ToursSafaris = () => {
       icon: Camera,
       title: 'WILDLIFE SAFARIS',
       description: 'Explore national parks, game reserves, and wildlife sanctuaries.',
+      image: '/images/wildlife.jpg',
       gradient: 'from-green-500 to-emerald-600'
     },
     {
       icon: Users,
       title: 'CULTURAL TOURS',
       description: 'Discover vibrant markets, historic sites, and local traditions.',
+      image: '/images/cultural.jpg',
       gradient: 'from-purple-500 to-pink-600'
     },
     {
       icon: Palmtree,
       title: 'BEACH RELAXATION',
       description: 'Unwind on pristine beaches, snorkel, or dive in crystal-clear waters.',
+      image: '/images/beach.jpg',
       gradient: 'from-blue-300 to-cyan-500'
     },
     {
       icon: Zap,
       title: 'ADVENTURE ACTIVITIES',
       description: 'Hike, bike, kayak, or take to the skies for breathtaking views.',
+      image: '/images/adventure.jpg',
       gradient: 'from-yellow-500 to-red-300'
     },
     {
       icon: Map,
       title: 'COMBINATED TOURS',
       description: 'Mix and match destinations and activities for a unique experience.',
+      image: '/images/combined.jpg',
       gradient: 'from-amber-500 to-yellow-600'
     }
   ];
@@ -250,7 +255,7 @@ const ToursSafaris = () => {
         '/images/mozambique-islands-3.jpg',
         '/images/mozambique-islands-4.jpg'
       ],
-      color: 'blue'
+      color: 'amber'
     },
     {
       title: 'Zambia Safari',
@@ -261,7 +266,7 @@ const ToursSafaris = () => {
         '/images/zambia-safari-3.jpg',
         '/images/zambia-safari-4.jpg'
       ],
-      color: 'green'
+      color: 'amber'
     },
     {
       title: 'Southern Africa Odyssey',
@@ -272,7 +277,7 @@ const ToursSafaris = () => {
         '/images/southern-africa-3.jpg',
         '/images/southern-africa-4.jpg'
       ],
-      color: 'purple'
+      color: 'amber'
     }
   ];
 
@@ -281,13 +286,13 @@ const ToursSafaris = () => {
       icon: Star,
       title: 'GUIDED SAFARIS',
       description: 'Expert guides lead you through unforgettable experiences.',
-      gradient: 'from-indigo-500 to-purple-600'
+      gradient: 'from-yellow-500 to-amber-600'
     },
     {
       icon: Car,
       title: 'SELF-DRIVE SAFARIS',
       description: 'Explore at your own pace with our tailored itineraries.',
-      gradient: 'from-teal-500 to-cyan-600'
+      gradient: 'from-yellow-500 to-amber-600'
     },
     {
       icon: Crown,
@@ -299,7 +304,7 @@ const ToursSafaris = () => {
       icon: DollarSign,
       title: 'BUDGET SAFARIS',
       description: 'Affordable adventures without compromising on quality.',
-      gradient: 'from-green-500 to-emerald-600'
+      gradient: 'from-yellow-500 to-amber-600'
     }
   ];
 
@@ -343,38 +348,59 @@ const ToursSafaris = () => {
       </section>
 
       {/* Tour Categories Section */}
-      <section className="py-16 sm:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
-            <p className="text-amber-600 font-semibold mb-2 uppercase tracking-wide">
-              Tours and Safaris
-            </p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-900 mb-4">
-              TOUR CATEGORIES
-            </h2>
+<section className="py-16 sm:py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-12 sm:mb-16">
+      <p className="text-amber-600 font-semibold mb-2 uppercase tracking-wide">
+        Tours and Safaris
+      </p>
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-900 mb-4">
+        TOUR CATEGORIES
+      </h2>
+    </div>
+
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      {categories.map((category, idx) => (
+        <div key={idx} className="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-2 duration-300 h-96">
+          {/* Background Image */}
+          <div className="absolute inset-0">
+            <img 
+              src={category.image}
+              alt={category.title}
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              onError={(e) => {
+                e.target.src = 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&q=80';
+              }}
+            />
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30"></div>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {categories.map((category, idx) => (
-              <div key={idx} className="group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-2 duration-300">
-                <div className={`bg-gradient-to-br ${category.gradient} p-8 text-center`}>
-                  <div className="bg-white bg-opacity-20 backdrop-blur-sm w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                    <category.icon className="w-10 h-10 text-white" />
-                  </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
-                    {category.title}
-                  </h3>
-                </div>
-                <div className="p-6">
-                  <p className="text-neutral-700 leading-relaxed text-center">
-                    {category.description}
-                  </p>
-                </div>
-              </div>
-            ))}
+          {/* Content */}
+          <div className="relative h-full flex flex-col justify-end p-6 sm:p-8 text-white">
+            {/* Icon */}
+            <div className="bg-white/20 backdrop-blur-sm w-16 h-16 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-amber-500 transition-all shadow-lg">
+              <category.icon className="w-8 h-8 text-white" />
+            </div>
+            
+            {/* Title */}
+            <h3 className="text-2xl sm:text-3xl font-bold mb-3 drop-shadow-lg">
+              {category.title}
+            </h3>
+            
+            {/* Description */}
+            <p className="text-white/90 leading-relaxed drop-shadow-lg">
+              {category.description}
+            </p>
           </div>
+
+          {/* Hover Shine Effect */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Featured Tours Section */}
       <section className="py-16 sm:py-20 bg-neutral-100">

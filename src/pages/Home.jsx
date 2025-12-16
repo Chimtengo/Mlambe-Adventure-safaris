@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ImageSlider from '../components/ImageSlider';
 import  ImageWithSkeleton  from '../components/ImageWithSkeleton';
+import { Helmet } from 'react-helmet-async';
 import { ChevronRight, Camera, Waves, Users, Mountain, Palmtree, Fish, MapPin, Calendar, DollarSign, Mail, Phone } from 'lucide-react';
 
 const Home = () => {
@@ -36,37 +37,37 @@ const Home = () => {
   const popularTrips = [
     {
       title: '12 Days Northern Malawi Classic Tour',
-      validity: '1/Jan-31/Dec/2025',
+      validity: '1/Jan-31/Dec/2026',
       price: '2,250 P/P',
       image: '/images/tour1.jpg' 
     },
     {
       title: '5 Days Lake Malawi & Liwonde National Park',
-      validity: '1/Jan-31/Dec/2025',
+      validity: '1/Jan-31/Dec/2026',
       price: '870 P/P',
       image: '/images/tour2.jpg' 
     },
     {
       title: '16 Days Southern Malawi Classic Tour',
-      validity: '1/Jan-31/Dec/2025',
+      validity: '1/Jan-31/Dec/2026',
       price: '2,350 P/P',
       image: '/images/tour3.jpg' 
     },
     {
       title: '12 Days Malawi Cultural Tour',
-      validity: '1/Jan-31/Dec/2025',
+      validity: '1/Jan-31/Dec/2026',
       price: '1,950 P/P',
       image: '/images/tour4.jpg' 
     },
     {
       title: '14 Days Malawi Typical Safari Tour',
-      validity: '1/Jan-31/Dec/2025',
+      validity: '1/Jan-31/Dec/2026',
       price: '2,160 P/P',
       image: '/images/tour5.jpg' 
     },
     {
       title: '12 Days Malawi Bush & Beach Vacation',
-      validity: '1/Jan-31/Dec/2025',
+      validity: '1/Jan-31/Dec/2026',
       price: '2,275 P/P',
       image: '/images/tour6.jpg' 
     }
@@ -92,7 +93,47 @@ const Home = () => {
 
   return (
     <div className="pt-20">
-      {/* Hero Section with Slider */}
+        <Helmet>
+          {/* Page Title */}
+          <title>
+            Mlambe Adventure Safaris | Malawi Safari Tours, Lake Malawi & Southern Africa
+          </title>
+
+          {/* Meta Description */}
+          <meta
+            name="description"
+            content="Mlambe Adventure Safaris is a premier tour operator offering Malawi safaris, Lake Malawi holidays, cultural tours, wildlife adventures, and custom trips across Malawi, Mozambique, and Zambia."
+          />
+
+          {/* Keywords */}
+          <meta
+            name="keywords"
+            content="Malawi safari, Lake Malawi tours, safari tours Malawi, adventure safaris Malawi, Southern Africa tours, wildlife safaris, cultural tours Malawi"
+          />
+
+          {/* Open Graph (Facebook / WhatsApp) */}
+          <meta property="og:title" content="Mlambe Adventure Safaris | Discover Southern Africa" />
+          <meta
+            property="og:description"
+            content="Explore unforgettable safari experiences in Malawi, Mozambique, and Zambia with Mlambe Adventure Safaris."
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://mlambeadventuresafaris.com/" />
+          <meta property="og:image" content="https://mlambeadventuresafaris.com/images/hero1.jpg" />
+
+          {/* Twitter */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Mlambe Adventure Safaris" />
+          <meta
+            name="twitter:description"
+            content="Safari tours, Lake Malawi adventures, and cultural experiences across Southern Africa."
+          />
+          <meta name="twitter:image" content="https://mlambeadventuresafaris.com/images/hero1.jpg" />
+        </Helmet>
+
+
+
+        {/* Hero Section with Slider */}
       <section className="relative h-screen">
         <ImageSlider images={heroImages} autoPlay={true} interval={5000} />
         
@@ -138,6 +179,8 @@ const Home = () => {
               />
             </div>
           </div>
+
+
 
           {/* Three Countries - Clear Visibility */}
           <div className="grid md:grid-cols-3 gap-8">
@@ -360,6 +403,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      
 
       {/* Testimonials Section */}
       <section className="py-20 bg-neutral-100">

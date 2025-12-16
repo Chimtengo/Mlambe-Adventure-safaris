@@ -29,8 +29,8 @@ const Booking = () => {
 
     emailjs
       .send(
-        'service_x0xli2h',
-        'template_wsvwgig',    
+        'service_yfgzcop',
+        'template_2so6z1s',    
         {
           from_name: bookingForm.fullName,
           from_email: bookingForm.email,
@@ -41,7 +41,7 @@ const Booking = () => {
           interestedIn: bookingForm.interestedIn,
           notes: bookingForm.notes,
         },
-        'twjyyJIa_TSVz5JMY'      
+        't5yqryKg6AeDRfy7P'      
       )
       .then(() => {
         alert('✅ Your booking request has been sent successfully! We will contact you soon.' + '\n' + 'Thank you for choosing Mlambe Adventure Safaris.');
